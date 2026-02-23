@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chai Kaari – Artisan Chai, Thiruvananthapuram</title>
+  <meta name="description"
+    content="Chai Kaari is Thiruvananthapuram's beloved artisan chai destination. Authentic Kerala chai, curated bites, and warm community vibes. Dine-in, delivery on Swiggy." />
+  <meta name="theme-color" content="#3d5a3e" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chai Kaari – Artisan Chai, Thiruvananthapuram" />
+  <meta property="og:description"
+    content="Thiruvananthapuram's beloved artisan chai destination. As featured in The Hindu." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+
+
+  <!-- ═══════════════════════════ STICKY HEADER ═══════════════════════════ -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="header-inner container">
+      <a href="#home" class="logo-link" aria-label="Chai Kaari – Home">
+        <div class="logo-mark">
+          <span class="logo-icon">☕</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Chai Kaari</span>
+          <span class="logo-sub">Thiruvananthapuram</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#location" class="nav-link">Location</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions" style="display: flex; align-items: center; gap: var(--space-md);">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <a href="https://www.swiggy.com/city/thiruvananthapuram/chaikaari-thampanoor-nalanchira-rest1173183"
+            target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="Order chai on Swiggy">
+            Order Now
+          </a>
+        </div>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileNav"
+        aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#menu" class="mobile-nav-link">Menu</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="#location" class="mobile-nav-link">Location</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <a href="https://www.swiggy.com/city/thiruvananthapuram/chaikaari-thampanoor-nalanchira-rest1173183"
+        target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+        style="margin-top: 1.5rem; display: inline-block;" aria-label="Order chai on Swiggy">
+        Order on Swiggy
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+    <div class="hero-pinned-space" id="home">
+      <section class="hero" aria-labelledby="hero-heading">
+        <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="container hero-content">
+          <div class="hero-badge">As featured in The Hindu</div>
+          <h1 class="hero-heading" id="hero-heading">
+            <span class="hero-heading-small">Thiruvananthapuram's</span>
+            Every Sip,<br />
+            <em>A Story</em>
+          </h1>
+          <p class="hero-tagline">
+            Artisan chai brewed with love, served with soul — right in the heart of Kerala's capital.
+          </p>
+          <div class="hero-ctas">
+            <a href="#location" class="btn btn-primary" aria-label="Visit Chai Kaari at our location">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Visit Us
+            </a>
+            <a href="https://wa.me/918089005330?text=Hi%20Chai%20Kaari!%20I%27d%20like%20to%20know%20more."
+              target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+              aria-label="Message Chai Kaari on WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+              Message on WhatsApp
+            </a>
+            <a href="https://www.swiggy.com/city/thiruvananthapuram/chaikaari-thampanoor-nalanchira-rest1173183"
+              target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="Order Chai Kaari on Swiggy">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+              </svg>
+              Order on Swiggy
+            </a>
+          </div>
+          <div class="hero-tagline-sub" aria-label="Operating hours">
+            Open daily · 7 AM – 11 PM · Nalanchira & Thampanoor
+          </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="scroll-hint" aria-hidden="true">
+          <span class="scroll-hint-text">Scroll</span>
+          <div class="scroll-hint-line"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-label">Our Story</div>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 class="section-heading" id="about-heading">
+              Born from a cup,<br /><em>Built by a community</em>
+            </h2>
+            <p class="body-text">
+              Chai Kaari began with a simple conviction: that the perfect cup of chai shouldn't be a luxury.
+              Nestled in Thiruvananthapuram's vibrant neighbourhoods, we set out to create a space where tradition
+              meets craftsmanship — where each blend is sourced with intention, brewed with patience,
+              and served with genuine warmth.
+            </p>
+            <p class="body-text">
+              What makes us different? Our bites. Every snack on our menu is crafted by talented home cooks
+              from the community — real people, real recipes, real flavour. It's hyperlocal food done right,
+              and it's what The Hindu came to write about.
+            </p>
+            <div class="about-values">
+              <div class="value-tag">🍃 Ethically Sourced</div>
+              <div class="value-tag">🏠 Community Kitchen</div>
+              <div class="value-tag">🌿 No Artificial Flavours</div>
+            </div>
+          </div>
+
+          <div class="about-aside">
+            <!-- The Hindu feature card -->
+            <a href="https://www.thehindu.com/life-and-style/food/chaikaari-in-thiruvananthapuram-sells-snacks-made-by-home-cooks/article65380713.ece"
+              target="_blank" rel="noopener noreferrer" class="featured-card"
+              aria-label="Read the Chai Kaari feature in The Hindu">
+              <div class="featured-card-logo">
+                <span class="th-logo">THE HINDU</span>
+              </div>
+              <div class="featured-card-body">
+                <div class="featured-card-tag">Featured Story</div>
+                <p class="featured-card-headline">
+                  "Chaikaari in Thiruvananthapuram sells snacks made by home cooks"
+                </p>
+                <span class="featured-card-cta">
+                  Read the article
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Stats strip -->
+            <div class="stats-strip">
+              <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Chai Varieties</div>
+              </div>
+              <div class="stat-divider" aria-hidden="true"></div>
+              <div class="stat-item">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Locations</div>
+              </div>
+              <div class="stat-divider" aria-hidden="true"></div>
+              <div class="stat-item">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Good Vibes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ MENU HIGHLIGHTS ═══════════════════════════ -->
+    <section class="section menu-section" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+        <div class="section-label">What We Brew</div>
+        <h2 class="section-heading centered" id="menu-heading">
+          Menu <em>Highlights</em>
+        </h2>
+        <p class="section-subheading centered">
+          Simple ingredients, masterful execution. Our chai is brewed fresh to order — no shortcuts, ever.
+        </p>
+
+        <!-- Category tabs -->
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="tab-chai" id="tab-btn-chai"
+            data-tab="chai">
+            Chai & Drinks
+          </button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-bites" id="tab-btn-bites"
+            data-tab="bites">
+            Bites & Snacks
+          </button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-specials" id="tab-btn-specials"
+            data-tab="specials">
+            Specials
+          </button>
+        </div>
+
+        <!-- Chai tab -->
+        <div class="menu-grid tab-panel active" id="tab-chai" role="tabpanel" aria-labelledby="tab-btn-chai">
+          <article class="menu-card bestseller" aria-label="Classic Masala Chai - Bestseller">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #8B4513 0%, #c47a3a 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">☕</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-badge">Bestseller</div>
+              <h3 class="menu-card-name">Classic Masala Chai</h3>
+              <p class="menu-card-desc">House-blend spices, full-cream milk, Assam leaf. The one that started it all.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹40</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" aria-label="Ginger Lemon Chai">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #5a8a40 0%, #a3c47a 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🍋</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Ginger Lemon Chai</h3>
+              <p class="menu-card-desc">Bright, zingy, warming — a morning ritual reimagined with fresh ginger and
+                Kerala lemon.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹45</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" aria-label="Kashmiri Kahwa">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #c4793a 0%, #e8b87a 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🌹</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Kashmiri Kahwa</h3>
+              <p class="menu-card-desc">Saffron, cardamom, rose petals, almond. A celebration in every sip.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹70</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card bestseller" aria-label="Sulaimani - Bestseller">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #2d1a0e 0%, #7a4a2a 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🫖</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-badge">Fan Favourite</div>
+              <h3 class="menu-card-name">Sulaimani</h3>
+              <p class="menu-card-desc">Black tea with lemon, mint, and a hint of honey. Kerala's coastal heritage in a
+                cup.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹50</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" aria-label="Tulsi Honey Chai">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #3d7a5a 0%, #85c4a0 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🌿</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Tulsi Honey Chai</h3>
+              <p class="menu-card-desc">Holy basil, forest honey, whole milk. Naturally soothing, naturally delicious.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹55</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" aria-label="Cold Brew Chai">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #1a3a5c 0%, #5a8ab0 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🧊</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Cold Brew Chai</h3>
+              <p class="menu-card-desc">18-hour cold steeped, shaken with ice and condensed milk. Kerala summer sorted.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹80</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Bites tab -->
+        <div class="menu-grid tab-panel" id="tab-bites" role="tabpanel" aria-labelledby="tab-btn-bites" hidden>
+          <article class="menu-card bestseller" aria-label="Achappam - Community Kitchen Bestseller">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #c4a030 0%, #e8d080 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🌸</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-badge">Community Kitchen</div>
+              <h3 class="menu-card-name">Achappam</h3>
+              <p class="menu-card-desc">Traditional rose cookie made by our home-cook partners. Crispy, delicate,
+                irresistible.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹30</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" aria-label="Unniyappam">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #7a4010 0%, #c4803a 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🟤</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Unniyappam</h3>
+              <p class="menu-card-desc">Soft, sweet Kerala rice-banana balls pan-fried in coconut oil. Pure nostalgia.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹35</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" aria-label="Pazham Pori">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #c4a030 0%, #f0c060 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🍌</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Pazham Pori</h3>
+              <p class="menu-card-desc">Ripe banana fritters in a light maida batter. The quintessential chai companion.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹25</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" aria-label="Neyyappam">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #8B5010 0%, #d4902a 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🫓</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Neyyappam</h3>
+              <p class="menu-card-desc">Rice and jaggery pancakes fried in pure ghee. A festive treat made everyday.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹30</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Specials tab -->
+        <div class="menu-grid tab-panel" id="tab-specials" role="tabpanel" aria-labelledby="tab-btn-specials" hidden>
+          <article class="menu-card bestseller" aria-label="Chai Kaari Special Blend">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #3d5a3e 0%, #8ab07a 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">⭐</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-badge">House Special</div>
+              <h3 class="menu-card-name">Chai Kaari Signature Blend</h3>
+              <p class="menu-card-desc">Our secret recipe. Seven spices, two teas, one memory you'll be chasing forever.
+              </p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹75</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" aria-label="Monsoon Chai Special">
+            <div class="menu-card-img" style="background: linear-gradient(135deg, #1a3a5c 0%, #4a7aa0 100%);"
+              aria-hidden="true">
+              <span class="menu-card-emoji">🌧️</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">Monsoon Chai</h3>
+              <p class="menu-card-desc">Pepper-forward, clove-back, rich milk — made for Kerala's rain. Seasonal
+                special.</p>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">₹60</span>
+                <span class="menu-seasonal">Seasonal</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="menu-note">
+          Full menu available in-store and on Swiggy. Prices subject to change. All chai made fresh to order.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ GALLERY ═══════════════════════════ -->
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-label">Visual Story</div>
+        <h2 class="section-heading" id="gallery-heading">
+          The <em>Chai Kaari</em> World
+        </h2>
+      </div>
+      <div class="gallery-grid" aria-label="Gallery of Chai Kaari photos">
+        <div class="gallery-item gallery-item--large" tabindex="0" role="img"
+          aria-label="Chai Kaari interior with warm green ambiance – image placeholder">
+          <div class="gallery-placeholder">
+            <span class="gallery-icon">🏠</span>
+            <span class="gallery-label">Our Space</span>
+          </div>
+          <div class="gallery-overlay">
+            <span>Interior Vibes</span>
+          </div>
+        </div>
+        <div class="gallery-item" tabindex="0" role="img" aria-label="Masala chai being poured – image placeholder">
+          <div class="gallery-placeholder">
+            <span class="gallery-icon">☕</span>
+            <span class="gallery-label">Masala Chai</span>
+          </div>
+          <div class="gallery-overlay"><span>The Pour</span></div>
+        </div>
+        <div class="gallery-item" tabindex="0" role="img" aria-label="Community home cooks – image placeholder">
+          <div class="gallery-placeholder">
+            <span class="gallery-icon">👩‍🍳</span>
+            <span class="gallery-label">Our Cooks</span>
+          </div>
+          <div class="gallery-overlay"><span>Our People</span></div>
+        </div>
+        <div class="gallery-item" tabindex="0" role="img" aria-label="Achappam and snacks display – image placeholder">
+          <div class="gallery-placeholder">
+            <span class="gallery-icon">🌸</span>
+            <span class="gallery-label">Achappam</span>
+          </div>
+          <div class="gallery-overlay"><span>Community Bites</span></div>
+        </div>
+        <div class="gallery-item gallery-item--wide" tabindex="0" role="img"
+          aria-label="Chai Kaari storefront – image placeholder">
+          <div class="gallery-placeholder">
+            <span class="gallery-icon">🏪</span>
+            <span class="gallery-label">Our Story</span>
+          </div>
+          <div class="gallery-overlay"><span>Storefront</span></div>
+        </div>
+        <div class="gallery-item" tabindex="0" role="img" aria-label="Evening chai crowd – image placeholder">
+          <div class="gallery-placeholder">
+            <span class="gallery-icon">🌆</span>
+            <span class="gallery-label">Evening Hours</span>
+          </div>
+          <div class="gallery-overlay"><span>Evening Rush</span></div>
+        </div>
+      </div>
+      <div class="gallery-cta container">
+        <p class="gallery-cta-text">Follow our daily updates on Instagram</p>
+        <a href="https://www.instagram.com/chaikaari_/?hl=en" target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline" aria-label="Follow Chai Kaari on Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+          @chaikaari_ on Instagram
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ LOCATION ═══════════════════════════ -->
+    <section class="section location-section" id="location" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="section-label">Find Us</div>
+        <h2 class="section-heading" id="location-heading">
+          Come <em>Visit</em> Us
+        </h2>
+        <p class="section-subheading">
+          Two locations in Thiruvananthapuram, both worth the trip.
+        </p>
+
+        <div class="location-grid">
+          <div class="location-cards">
+
+            <div class="location-card">
+              <div class="location-card-icon" aria-hidden="true">📍</div>
+              <div class="location-card-body">
+                <h3 class="location-card-name">Nalanchira</h3>
+                <address class="location-address">
+                  Nalanchira, Thiruvananthapuram,<br />
+                  Kerala – 695 015
+                </address>
+                <div class="location-hours">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  <span>Mon – Sun: 7:00 AM – 11:00 PM</span>
+                </div>
+                <a href="https://www.google.com/maps/place/Chaikaari/@8.5471771,76.9446697,16.5z/data=!4m6!3m5!1s0x3b05b9006cc6d555:0x57d06f113f351599!8m2!3d8.5477532!4d76.9441465!16s%2Fg%2F11xn5k8fh_?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm"
+                  aria-label="Open Nalanchira location in Google Maps">
+                  Open in Google Maps ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <div class="location-card-icon" aria-hidden="true">📍</div>
+              <div class="location-card-body">
+                <h3 class="location-card-name">Thampanoor</h3>
+                <address class="location-address">
+                  Thampanoor, Thiruvananthapuram,<br />
+                  Kerala – 695 001
+                </address>
+                <div class="location-hours">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  <span>Mon – Sun: 7:00 AM – 11:00 PM</span>
+                </div>
+                <a href="https://maps.app.goo.gl/bXaLHnqNaugHmvJv7" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm" aria-label="Open Thampanoor location in Google Maps">
+                  Open in Google Maps ↗
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Map embed area -->
+          <div class="map-container" role="region" aria-label="Map showing Chai Kaari location">
+            <div class="map-embed-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7951.263!2d76.9366!3d8.5241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05beb3f7c7bc15%3A0x3abd3abe7dc38f14!2sChaikaari!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Chai Kaari location on Google Maps"
+                aria-label="Google Maps showing Chai Kaari restaurant location in Thiruvananthapuram"></iframe>
+              <!-- Fallback for when iframe fails -->
+              <noscript>
+                <div class="map-fallback">
+                  <span>📍 Chai Kaari, Thiruvananthapuram, Kerala</span>
+                  <a href="https://maps.google.com/?q=Chaikaari+Thiruvananthapuram" target="_blank"
+                    rel="noopener noreferrer">Open in Google Maps</a>
+                </div>
+              </noscript>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-heading centered" id="contact-heading">
+          We'd Love to <em>Hear From You</em>
+        </h2>
+        <p class="section-subheading centered">
+          For orders, events, collaborations, or just to say hello — reach out on any platform.
+        </p>
+
+        <div class="contact-grid">
+
+          <a href="https://wa.me/918089005330?text=Hi%20Chai%20Kaari!%20I'd%20like%20to%20know%20more." target="_blank"
+            rel="noopener noreferrer" class="contact-card contact-card--whatsapp"
+            aria-label="Message Chai Kaari on WhatsApp">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <div class="contact-platform">WhatsApp</div>
+              <div class="contact-detail">+91 80890 05330</div>
+              <div class="contact-action">Message Us →</div>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/chaikaari_/?hl=en" target="_blank" rel="noopener noreferrer"
+            class="contact-card contact-card--instagram" aria-label="Follow Chai Kaari on Instagram">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <div class="contact-platform">Instagram</div>
+              <div class="contact-detail">@chaikaari_</div>
+              <div class="contact-action">Follow Us →</div>
+            </div>
+          </a>
+
+          <a href="https://www.facebook.com/chaikaari/" target="_blank" rel="noopener noreferrer"
+            class="contact-card contact-card--facebook" aria-label="Follow Chai Kaari on Facebook">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <div class="contact-platform">Facebook</div>
+              <div class="contact-detail">Chai Kaari</div>
+              <div class="contact-action">Connect →</div>
+            </div>
+          </a>
+
+          <a href="https://www.swiggy.com/city/thiruvananthapuram/chaikaari-thampanoor-nalanchira-rest1173183"
+            target="_blank" rel="noopener noreferrer" class="contact-card contact-card--swiggy"
+            aria-label="Order from Chai Kaari on Swiggy">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <div class="contact-platform">Swiggy</div>
+              <div class="contact-detail">Order & Delivery</div>
+              <div class="contact-action">Order Now →</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+
+      <div class="footer-brand">
+        <div class="logo-mark logo-mark--footer">
+          <span class="logo-icon">☕</span>
+        </div>
+        <div>
+          <div class="footer-brand-name">Chai Kaari</div>
+          <div class="footer-brand-sub">Thiruvananthapuram, Kerala</div>
+        </div>
+        <p class="footer-brand-desc">
+          Artisan chai, community bites, and a little bit of Kerala soul.
+          Two locations. One heart.
+        </p>
+        <div class="footer-hours">
+          <strong>Hours</strong>
+          <span>Monday – Sunday: 7:00 AM – 11:00 PM</span>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Navigate</h4>
+          <ul role="list">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#menu" class="footer-link">Menu</a></li>
+            <li><a href="#gallery" class="footer-link">Gallery</a></li>
+            <li><a href="#location" class="footer-link">Location</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Order</h4>
+          <ul role="list">
+            <li>
+              <a href="https://www.swiggy.com/city/thiruvananthapuram/chaikaari-thampanoor-nalanchira-rest1173183"
+                target="_blank" rel="noopener noreferrer" class="footer-link">Swiggy</a>
+            </li>
+            <li>
+              <a href="https://wa.me/918089005330" target="_blank" rel="noopener noreferrer" class="footer-link">
+                WhatsApp Order
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Follow</h4>
+          <ul role="list">
+            <li>
+              <a href="https://www.instagram.com/chaikaari_/?hl=en" target="_blank" rel="noopener noreferrer"
+                class="footer-link">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/chaikaari/" target="_blank" rel="noopener noreferrer"
+                class="footer-link">
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-legal">
+          &copy; 2025 Chai Kaari. All rights reserved.
+          ·
+          <a href="#" class="footer-link">Privacy Policy</a>
+          ·
+          <a href="#" class="footer-link">Terms</a>
+        </p>
+        <p class="footer-credit">
+          Made with ☕ in Thiruvananthapuram
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
