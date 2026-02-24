@@ -456,20 +456,23 @@ address {
 }
 
 .logo-mark {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--wood-400), var(--wood-300));
+  height: 52px;
+  width: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+  justify-content: flex-start;
   flex-shrink: 0;
 }
 
+.logo-img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
 .logo-mark--footer {
-  width: 44px;
-  height: 44px;
+  height: 72px;
+  width: auto;
 }
 
 .logo-text {
