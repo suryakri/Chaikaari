@@ -81,15 +81,8 @@ function lerp(a, b, t) {
     const imgH = img.height;
     if (!imgW || !imgH) return;
 
-    // Math for scaling
-    let scale = Math.max(cw / imgW, ch / imgH); // Default: object-fit cover
-
-    // On narrow vertical mobile screens, 'cover' crops out 70% of a 16:9 frame.
-    // Instead, we fit to width (contain) to show the full scene, letterboxing vertically.
-    if (cw < 768 && ch > cw) {
-      scale = cw / imgW;
-    }
-
+    // Math for cover sizing
+    const scale = Math.max(cw / imgW, ch / imgH);
     const drawW = imgW * scale;
     const drawH = imgH * scale;
 
